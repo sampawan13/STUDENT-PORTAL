@@ -1,0 +1,10 @@
+<?php
+	require_once("../resources/config.php");
+	require_once("../resources/library/templateFunctions.php");
+	if(isset($_SESSION["email"]))
+	{
+		session_unset();
+		session_destroy();
+	}
+	redirect_to("index.php");
+?>
